@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F1 Race Intelligence | Formula 1 Analytics</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script type="module"
+        src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#home" class="brand">
+            <span class="brand-f1">F1</span>
+            <span class="brand-name">RACE INTELLIGENCE</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#project">Project</a>
+            <a href="#insights">Insights</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#story">Story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <div class="eyebrow">
+                    THE SCIENCE BEHIND THE SPEED
+                </div>
+
+                <h1>
+                    FORMULA 1<br>
+                    <span>RACE INTELLIGENCE</span>
+                </h1>
+
+                <p class="hero-description">
+                    Every lap tells a story. Every second matters.
+                    Discover the data behind driver performance,
+                    team competition, race outcomes, and circuit strategy.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#dashboard" class="button button-red">
+                        EXPLORE DASHBOARD ↗
+                    </a>
+
+                    <a href="#project" class="button button-outline">
+                        DISCOVER THE PROJECT
+                    </a>
+                </div>
+
+                <div class="hero-tagline">
+                    DATA ANALYTICS <span>•</span>
+                    RACE STRATEGY <span>•</span>
+                    PERFORMANCE
+                </div>
+            </div>
+
+            <div class="hero-number">01 / RACE ANALYTICS</div>
+        </section>
+
+
+        <!-- KPI STRIP -->
+        <section class="stats-strip">
+            <div class="stat">
+                <span class="stat-number">01</span>
+                <span class="stat-label">DRIVER PERFORMANCE</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number">02</span>
+                <span class="stat-label">TEAM COMPARISON</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number">03</span>
+                <span class="stat-label">CIRCUIT ANALYSIS</span>
+            </div>
+
+            <div class="stat">
+                <span class="stat-number">04</span>
+                <span class="stat-label">RACE RELIABILITY</span>
+            </div>
+        </section>
+
+
+        <!-- PROJECT OVERVIEW -->
+        <section class="section project-section" id="project">
+            <div class="section-heading">
+                <p class="eyebrow">01 — THE PROJECT</p>
+                <h2>Beyond the <span>Finish Line.</span></h2>
+                <p class="section-intro">
+                    Turning Formula 1 race data into meaningful
+                    performance insights.
+                </p>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-copy">
+                    <p>
+                        Formula 1 is more than speed. It is a combination
+                        of driver skill, team performance, circuit
+                        characteristics, reliability, and strategy.
+                    </p>
+
+                    <p>
+                        This project uses Tableau visualisations to explore
+                        historical race data, identify performance patterns,
+                        compare competitors, and present racing information
+                        through an interactive analytical experience.
+                    </p>
+
+                    <div class="project-features">
+                        <div class="feature">
+                            <span class="feature-icon">01</span>
+                            <div>
+                                <h3>Performance Analysis</h3>
+                                <p>Explore points, results, and driver rankings.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <span class="feature-icon">02</span>
+                            <div>
+                                <h3>Competitive Intelligence</h3>
+                                <p>Compare teams and championship performance.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <span class="feature-icon">03</span>
+                            <div>
+                                <h3>Reliability Insights</h3>
+                                <p>Investigate recorded retirements and DNF reasons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-visual">
+                    <div class="visual-topline">
+                        <span>RACE TELEMETRY</span>
+                        <span class="live-dot"></span>
+                    </div>
+
+                    <div class="circuit-art">
+                        <svg viewBox="0 0 500 360"
+                             xmlns="http://www.w3.org/2000/svg"
+                             role="img"
+                             aria-label="Stylised racing circuit illustration">
+                            <defs>
+                                <linearGradient id="trackGradient"
+                                    x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ff514b"/>
+                                    <stop offset="100%" stop-color="#a60000"/>
+                                </linearGradient>
+                            </defs>
+
+                            <path d="M91 178
+                                     C49 164 51 108 98 91
+                                     L161 68
+                                     C193 55 223 70 220 104
+                                     L215 128
+                                     C210 148 235 160 260 146
+                                     L319 111
+                                     C349 94 386 106 386 139
+                                     L386 163
+                                     C386 187 360 197 338 187
+                                     L312 177
+                                     C288 167 268 188 283 211
+                                     L309 249
+                                     C328 278 302 307 272 294
+                                     L224 273
+                                     C200 262 183 276 187 302
+                                     C192 331 151 340 131 313
+                                     L101 273
+                                     C82 249 98 224 121 222
+                                     L159 218
+                                     C187 215 188 185 162 179
+                                     Z"
+                                  fill="none"
+                                  stroke="#55565f"
+                                  stroke-width="25"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+
+                            <path d="M91 178
+                                     C49 164 51 108 98 91
+                                     L161 68
+                                     C193 55 223 70 220 104
+                                     L215 128
+                                     C210 148 235 160 260 146
+                                     L319 111
+                                     C349 94 386 106 386 139
+                                     L386 163
+                                     C386 187 360 197 338 187
+                                     L312 177
+                                     C288 167 268 188 283 211
+                                     L309 249
+                                     C328 278 302 307 272 294
+                                     L224 273
+                                     C200 262 183 276 187 302
+                                     C192 331 151 340 131 313
+                                     L101 273
+                                     C82 249 98 224 121 222
+                                     L159 218
+                                     C187 215 188 185 162 179
+                                     Z"
+                                  fill="none"
+                                  stroke="url(#trackGradient)"
+                                  stroke-width="5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+
+                            <circle cx="91" cy="178" r="7" fill="#ffffff"/>
+                            <circle cx="91" cy="178" r="13"
+                                    fill="none" stroke="#e10600"
+                                    stroke-width="2"/>
+
+                            <path d="M90 178 L45 178 L27 195"
+                                  fill="none" stroke="#e10600"
+                                  stroke-width="2"/>
+                            <text x="22" y="216" fill="#eeeeee"
+                                  font-size="12">START / FINISH</text>
+                        </svg>
+                    </div>
+
+                    <div class="visual-bottomline">
+                        <span>PRECISION</span>
+                        <span>PERFORMANCE</span>
+                        <span>ANALYTICS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- INTELLIGENCE DIMENSIONS -->
+        <section class="section insights-section" id="insights">
+            <div class="section-heading">
+                <p class="eyebrow">02 — THE ANALYTICS</p>
+                <h2>Intelligence <span>Dimensions.</span></h2>
+                <p class="section-intro">
+                    Explore the key questions behind Formula 1 performance.
+                </p>
+            </div>
+
+            <div class="insight-grid">
+                <article class="insight-card">
+                    <span class="card-index">01 / DRIVERS</span>
+                    <div class="card-symbol">↗</div>
+                    <h3>Driver Performance</h3>
+                    <p>
+                        Examine race results, points, and competitive
+                        performance across available seasons.
+                    </p>
+                    <a href="#dashboard">EXPLORE DATA ↗</a>
+                </article>
+
+                <article class="insight-card">
+                    <span class="card-index">02 / TEAMS</span>
+                    <div class="card-symbol">◈</div>
+                    <h3>Team Championship</h3>
+                    <p>
+                        Compare team results and investigate differences
+                        in championship performance.
+                    </p>
+                    <a href="#dashboard">EXPLORE DATA ↗</a>
+                </article>
+
+                <article class="insight-card">
+                    <span class="card-index">03 / CIRCUITS</span>
+                    <div class="card-symbol">⌁</div>
+                    <h3>Circuit Analysis</h3>
+                    <p>
+                        Explore race outcomes across circuits and
+                        geographical locations.
+                    </p>
+                    <a href="#dashboard">EXPLORE DATA ↗</a>
+                </article>
+
+                <article class="insight-card">
+                    <span class="card-index">04 / RELIABILITY</span>
+                    <div class="card-symbol">◎</div>
+                    <h3>Driver Reliability</h3>
+                    <p>
+                        Investigate recorded DNFs and the available
+                        retirement-reason categories.
+                    </p>
+                    <a href="#dashboard">EXPLORE DATA ↗</a>
+                </article>
+
+                <article class="insight-card">
+                    <span class="card-index">05 / STRATEGY</span>
+                    <div class="card-symbol">⌖</div>
+                    <h3>Race Strategy</h3>
+                    <p>
+                        Use available race and tyre information to
+                        investigate strategic patterns.
+                    </p>
+                    <a href="#dashboard">EXPLORE DATA ↗</a>
+                </article>
+
+                <article class="insight-card">
+                    <span class="card-index">06 / TRENDS</span>
+                    <div class="card-symbol">▥</div>
+                    <h3>Seasonal Trends</h3>
+                    <p>
+                        Compare results across seasons and discover
+                        changes in performance over time.
+                    </p>
+                    <a href="#dashboard">EXPLORE DATA ↗</a>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- TABLEAU DASHBOARD -->
+        <section class="section dashboard-section" id="dashboard">
+            <div class="section-heading">
+                <p class="eyebrow">03 — INTERACTIVE EXPERIENCE</p>
+                <h2>The Race <span>Dashboard.</span></h2>
+                <p class="section-intro">
+                    Interact with the published Tableau dashboard to
+                    explore the visualisations and available filters.
+                </p>
+            </div>
+
+            <div class="tableau-frame">
+                <div class="frame-heading">
+                    <div>
+                        <span class="frame-dot"></span>
+                        <span class="frame-dot"></span>
+                        <span class="frame-dot"></span>
+                    </div>
+                    <span>TABLEAU PUBLIC / DASHBOARD</span>
+                </div>
+
+                <tableau-viz
+                    id="f1Dashboard"
+                    src="https://public.tableau.com/views/gyanvi_25Oct26_6pm/Dashboard2"
+                    toolbar="bottom"
+                    hide-tabs
+                    device="default"
+                    style="width:100%; min-height:850px; display:block;">
+                </tableau-viz>
+            </div>
+
+            <p class="embed-note">
+                If the visualisation does not load, check the published
+                Tableau view URL and its sharing permissions.
+            </p>
+        </section>
+
+
+        <!-- TABLEAU STORY -->
+        <section class="section story-section" id="story">
+            <div class="section-heading">
+                <p class="eyebrow">04 — VISUAL NARRATIVE</p>
+                <h2>The Story Behind <span>the Data.</span></h2>
+                <p class="section-intro">
+                    Explore the Tableau story to follow the analysis
+                    through its visual narrative.
+                </p>
+            </div>
+
+            <div class="tableau-frame">
+                <div class="frame-heading">
+                    <div>
+                        <span class="frame-dot"></span>
+                        <span class="frame-dot"></span>
+                        <span class="frame-dot"></span>
+                    </div>
+                    <span>TABLEAU PUBLIC / STORY</span>
+                </div>
+
+                <tableau-viz
+                    id="f1Story"
+                    src="https://public.tableau.com/views/gyanvi_25Oct26_6pm/Story1"
+                    toolbar="bottom"
+                    hide-tabs
+                    device="default"
+                    style="width:100%; min-height:850px; display:block;">
+                </tableau-viz>
+            </div>
+        </section>
+
+
+        <!-- CONTACT / FOOTER -->
+        <section class="contact-section" id="contact">
+            <p class="eyebrow">THE FINISH LINE</p>
+            <h2>Driven by Data.<br><span>Inspired by Racing.</span></h2>
+            <p>
+                Formula 1 Race Intelligence — a data visualisation
+                project built using Tableau and Flask.
+            </p>
+
+            <a class="button button-red"
+               href="https://public.tableau.com/app/profile/gyanvi.jain/viz/gyanvi_25Oct26_6pm/Dashboard2?publish=yes"
+               target="_blank" rel="noopener noreferrer">
+                OPEN ON TABLEAU PUBLIC ↗
+            </a>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <a href="#home" class="footer-brand">F1 / RACE INTELLIGENCE</a>
+        <p>FORMULA 1 DATA ANALYTICS · TABLEAU PUBLIC · FLASK</p>
+        <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    </footer>
+
+</body>
+</html>
