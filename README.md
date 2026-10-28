@@ -110,7 +110,7 @@ The project should be checked for:
 ## 👩‍💻 Project Information
 
 **Project Developer:** Gyanvi Jain  
-**Programme:** B.Tech — First Year  
+**Programme:** B.Tech — Second Year  
 **Project Type:** Individual Project
 
 ## 📄 Documentation
